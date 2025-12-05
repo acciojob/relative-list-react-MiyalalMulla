@@ -1,10 +1,12 @@
+import React from 'react'
+
 export default function RelativeList() {
   const relatives = ["Ramesh Uncle", "Sita Aunty", "Vijay Mama", "Kiran Masi"];
 
   return (
-    <ol id="relativeList">     {/* important for test */}
+    <ol key="relativeList">
       {relatives.map((name, index) => (
-        <li id={`relativeListItem${index + 1}`} key={index}>  {/* test checks IDs */}
+        <li key={`relativeListItem${index + 1}`}>
           {name}
         </li>
       ))}
